@@ -1,0 +1,29 @@
+/* створюємо клас контейнер*/
+.container {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+@media screen and (min-width: 352px) {
+    .container {
+        width: 352px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 736px;
+    }
+}
+@media screen and (min-width: 1158px) {
+    .container {
+    width: 1158px;
+    padding-right: 15px;
+    padding-left: 15px;  
+    }
+}
+
+
+

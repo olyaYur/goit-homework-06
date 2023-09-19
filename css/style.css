@@ -9,58 +9,10 @@ body {
     letter-spacing: 0.02em; /*0.32px*/
 }
 
-/* скидаємо дефолтні стилі браузера*/
-h1, h2, h3, h4, h5, h6, p {
-    margin-top: 0;
-    margin-bottom: 0;
-} 
 
-ul,
-ol {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-}
 
-img {
-    display: block;
-}
 
-.link {
-    text-decoration: none;
-}
 
-.list {
-    list-style-type: none;
-}
-
-button {
-    cursor: pointer;
-}
-
-/*сss-змінні*/
-:root {
-    --first-level-title-color: #fff;
-    --secondary-third-level-title-color: #2E2F42;
-    --slate-color: #434455;
-    --navyblue-color: #2E2F42;
-    --iris-color: #4D5AE5;
-    --white-color:#FFFFFF;
-    --ocean-color:#404BBF;
-    --cloud-color:#F4F4FD;
-    --light-slate-color: #8E8F99;
-    --green-color: #31D0AA;
-    --dairy-color: #FCFCFC;
-    --cornflower-color: #E7E9FC;
-}
-
-/* створюємо клас контейнер*/
-.container {
-    width: 1158px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin: 0 auto;    
-}
 
 
 /*стилізація*/
@@ -96,97 +48,7 @@ button {
     letter-spacing: 0.02em; /*0.32px*/ /* it was mistake*/
 }
 
-/* nav*/
 
-.page-header {
-border-bottom: 1px solid #e7e9fc;
-box-shadow:  0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-
-.page-header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-       /* logo*/
-.logotype-text-link {
-    font-family: 'Raleway', sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.17; /* 116.667%   21px*//*mistake 1.16 was*/ 
-    letter-spacing: 0.03em;  /* 0.54px*/
-    text-transform: uppercase;
-    color: var(--iris-color);
-    margin-right: 76px;
-}
-
-.logotype-text-studio {
-    color: #2e2f42;
-}
-         /*menu-посилання*/ 
-.menu-list .menu-item-link {
-    font-weight: 500;
-    color: var(--navyblue-color);
-    padding: 24px 0;
-    display: block;
-
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.menu-list .menu-item-link:hover,
-.menu-list .menu-item-link:focus {
-    color: var(--ocean-color);    /* it was mistake*/
-}
-
-
-
-.menu-item .is-active {
-    color: var(--ocean-color);
-    position: relative; /*it was mistake*/
-}
-
-.menu-item .is-active::after {
-    width: 48px;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--ocean-color);
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -1px;  /*it was mistake*/ 
-}
-
-.main-navigation {
-    display: flex;
-    align-items: center;
-}
-
-.menu-list {
-    display: flex;
-    gap: 40px;
-}
-
-         /*контакти*/
-.page-contacts {
-    font-style: normal; 
-}
-    
-.page-contacts .contacts-item-link {
-    color: var(--slate-color);
-
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.page-contacts .contacts-item-link:hover,
-.page-contacts .contacts-item-link:focus {
-    color: var(--ocean-color);
-}
-
-.contacts-list {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-}
 
 /* section hero*/
 .segment-hero {
@@ -194,9 +56,8 @@ box-shadow:  0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
     ), 
-
     
-    url(../images/people-office-min.jpg);
+    url('../images/hero/hero-img-mobile.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -207,19 +68,52 @@ box-shadow:  0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.
     max-width: 1440px; /*it was mistake*/
 }
 
-/*приховуємо контент*/
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
+/* кроссбраузерна умова перевырки щільності екрана*/
+/* користувач зайшов з моб.присторою*/
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+screen and (min-resolution: 2dppx), 
+screen and (min-device-pixel-ratio: 2) {
+    .segment-hero {
+        background-image: url('../retina/hero/hero-img-mobile@2x.jpg');
+    }
+}
+
+/* Користувач зайшов з планшету */
+
+@media screen and (min-width: 768px) {
+    .segment-hero {
+        background-image: url('../retina/hero/hero-img-tablet.jpg');
+    }
+}
+@media screen and (min-resolution: 192dpi) and (min-width: 768px),
+screen and (min-resolution: 2dppx), 
+screen and (min-device-pixel-ratio: 2) {
+    .segment-hero {
+        background-image: url('../retina/hero/hero-img-tablet@2x.jpg');
+    }
+}
+
+
+/* Користувач зайшов з десктопу */
+@media screen and (min-width: 1024px) {
+    .segment-hero {
+        background-image: url('../retina/hero/hero-img-desk.jpg');
+    }
+}
+
+@media screen and (min-resolution: 192dpi) and (min-width: 1024px),
+screen and (min-resolution: 2dppx), 
+screen and (min-device-pixel-ratio: 2) {
+    .segment-hero {
+        background-image: url('../retina/hero/hero-img-desk@2x.jpg');
+    }
+}
+
+
+
+
+
+
 /*section our advantages*/
 
 .advantages-list {

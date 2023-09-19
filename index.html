@@ -17,11 +17,12 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header class="page-header">
-      <div class="container page-header-container">
+      <div class="container page-header-wrapper">
         <!--page header-->
         <!-- header-nav-address-->
         <nav class="main-navigation">
@@ -44,6 +45,11 @@
             </li>
           </ul>
         </nav>
+        <button class="menu-open-btn">
+          <svg class="menu-open-btn-icon" width="24" height="24" aria-label="icon burger">
+              <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
         <address class="page-contacts">
           <ul class="contacts-list list">
             <li class="contacts-item">
@@ -63,9 +69,11 @@
         <!--header finish -->
       </div>
     </header>
+    
     <main>
       <!--main start-->
       <!-- section hero-->
+      <!--
       <section class="segment-hero">
         <div class="container">
           <h1 class="title-first-level">
@@ -74,8 +82,10 @@
           <button type="button" class="btn-hero">Order Service</button>
         </div>
       </section>
-
+    -->
       <!-- section our advantages-->
+      
+      <!--
       <section class="segment-our-advantages section">
         <div class="container">
           <h2 id="studio" class="visually-hidden title-secondary-level">
@@ -157,7 +167,10 @@
           </ul>
         </div>
       </section>
+    -->
+
       <!-- section our team -->
+      <!--
       <section class="segment-our-team section">
         <div class="container">
           <h2 class="title-secondary-level">Our Team</h2>
@@ -413,7 +426,10 @@
           </ul>
         </div>
       </section>
+    -->
+
       <!-- section portfolio-->
+      <!--
       <section class="segment-our-portfolio section">
         <div class="container">
           <h2 id="portfolio" class="title-secondary-level">Our Portfolio</h2>
@@ -560,9 +576,15 @@
           </ul>
         </div>
       </section>
+    -->
       <!-- main finish-->
     </main>
+  
+
+
     <!--page footer-->
+
+    <!--
     <footer class="page-footer">
       <div class="container page-footer-container">
         <div class="footer-logo">
@@ -656,8 +678,12 @@
         </div>
       </div>
     </footer>
+    -->
+
     <!--Backdrop-->
-    <div class="backdrop is-open">
+
+    <!--
+    <div class="backdrop">
       <div class="modal">
         <button class="close-btn" type="button">
           <svg
@@ -785,6 +811,36 @@
           <button class="review-form-submit" type="Submit">Send</button>
         </form>
       </div>
+    </div>
+    -->
+
+    <!--Mobile-menu-->
+    <div class="mobile-menu">
+      <button class="close-btn close-btn-mobile-menu" type="button">
+        <svg
+          class="close-btn-icon"
+          width="8"
+          height="8"
+          aria-label="modal close icon"
+        >
+          <use href="./images/icons.svg#icon-close-btn"></use>
+        </svg>
+      </button>
+      <nav class="mobile-menu-navigation">
+        <ul class="mobile-menu-list list">
+          <li class="mobile-menu-item menu-item-decor">
+            <a class="mobile-menu-item-link link is-active" href="./index.html"
+              >Studio</a
+            >
+          </li>
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-item-link link" href="">Portfolio</a>
+          </li>
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-item-link link" href="">Contacts</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </body>
 </html>

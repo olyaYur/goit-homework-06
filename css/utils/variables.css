@@ -1,0 +1,16 @@
+/*сss-змінні*/
+:root {
+    --first-level-title-color: #fff;
+    --secondary-third-level-title-color: #2E2F42;
+    --slate-color: #434455;
+    --navyblue-color: #2E2F42;
+    --iris-color: #4D5AE5;
+    --white-color:#FFFFFF;
+    --ocean-color:#404BBF;
+    --cloud-color:#F4F4FD;
+    --light-slate-color: #8E8F99;
+    --green-color: #31D0AA;
+    --dairy-color: #FCFCFC;
+    --cornflower-color: #E7E9FC;
+    --common-black-color: #2F2F37;
+}
