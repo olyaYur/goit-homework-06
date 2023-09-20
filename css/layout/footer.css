@@ -20,16 +20,56 @@
     display: inline-block;
     margin-bottom: 16px;
 }
-
 .page-footer-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: baseline;  
+    align-items: center;  
 }
 
-.footer-logo {
-    margin-right: 120px;
+@media screen and (min-width: 768px) {
+    .page-footer-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 72px;
+        justify-content: flex-start;
+        align-items: baseline; 
+        padding-left: 108px; 
+    }
 }
+
+@media screen and (min-width: 1158px) {
+    .page-footer-container {
+        column-gap: 0;
+        row-gap: 0;
+        justify-content: space-between;
+        padding-left: 15px;
+        align-items: baseline; 
+    }
+} 
+
+
+
+
+.footer-logo {
+    margin-right: 0;
+    text-align:center;
+    margin-bottom: 72px;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-logo {
+        text-align:left;
+    }
+}
+@media screen and (min-width: 1158px) {
+    .footer-logo {
+        margin-right: 120px;
+    }
+}
+
 
 .social-list {
     display: flex;
@@ -41,9 +81,38 @@
 }
  
 .footer-social {
-    margin-right: 80px;
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 72px;
 }
+
+@media screen and (min-width: 768px) {
+    .footer-social {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .footer-social {
+        margin-right: 80px;
+        margin-bottom: 0;
+    }
+}
+
+.subscribe {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .subscribe {
+        text-align: left;
+    }
+}
+
+
+
  
+
 .social-link  {
    font-size: 0px;
    width: 100%;
@@ -598,9 +667,35 @@ label містить текстовий контент I accept the terms and co
 
 .subscribe-form-wrapper {
     display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+.subscribe-form-wrapper {
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+    align-items: center;
+}
+}
+
+/*
+.subscribe-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    align-items: center;
+}
+*/
+/*
+.subscribe-form-wrapper {
+    display: flex;
     gap: 24px;
     justify-content: flex-start;
 }
+*/
 
 .subscribe-form-input {
     width: 264px;
