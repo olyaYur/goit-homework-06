@@ -11,6 +11,11 @@ body {
 
 /*стилізація*/
 /*заголовки*/
+
+.title-first-level {
+    display: none;
+}
+@media screen and (min-width: 768px) {
 .title-first-level {
     font-size: 56px;
     line-height: 1.07;  /*60px*/
@@ -23,7 +28,7 @@ body {
     margin: 0 auto;
     margin-bottom: 48px;
 }
-
+}
 .title-secondary-level {
     font-size: 36px;
     line-height: 1.11; /* 111.111%   40px*/
@@ -34,15 +39,24 @@ body {
     margin-bottom: 72px;
 }
 
-
 .title-third-level {
 font-family: Roboto;
-font-size: 36px;
-font-weight: 700;
-line-height: 1.11; /* 111.111% */
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 1.2;
 letter-spacing: 0.02em
 text-transform: capitalize;
 }
+
+@media screen and (min-width: 768px) {
+    .title-third-level {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.11; 
+        }
+}
+
 
 
 
@@ -53,6 +67,17 @@ text-transform: capitalize;
     line-height: 1.2; /* 120%  24px*/
     color: var(--secondary-third-level-title-color);
 }
+}
+
+.our-advantages-title-third-level {
+    font-family: Roboto;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+
 }
 
 
@@ -68,10 +93,27 @@ text-transform: capitalize;
     background-size: cover;
     background-position: center center;
     background-color: var(--navyblue-color);
+    height: 432px;
+    text-align: center;
+
+}
+@media screen and (min-width: 768px) {
+.segment-hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+    ), 
+    
+    url('../../images/hero/hero-img-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: var(--navyblue-color);
     padding-top: 188px;
     padding-bottom: 188px;
     text-align: center;
 
+}
 }
 
 /* кроссбраузерна умова перевырки щільності екрана*/
@@ -139,9 +181,14 @@ letter-spacing: 0.32px;
 .advantages-list {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 72px;
 }
 
+@media screen and (min-width: 768px) {
+    .advantages-list {
+        gap: 24px;
+    }
+}
 
 
 
@@ -169,6 +216,8 @@ letter-spacing: 0.32px;
 
 }
 
+
+
 .advantages-item-title {
     margin-bottom: 8px;
 }
@@ -189,10 +238,34 @@ letter-spacing: 0.32px;
         background-color: var(--cloud-color);
     }
 }
+
+.our-advantages-title-text-wrapper .advantages-item-title {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .our-advantages-title-text-wrapper .advantages-item-title {
+        text-align: left;
+    } 
+}
+
+
 /* section our team */
 .segment-our-team {
     background-color: var(--cloud-color);
 
+}
+
+.segment-our-team-wrapper {
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+@media screen and (min-width: 768px) {
+.segment-our-team-wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+}
 }
 
 .our-team-list {
@@ -272,6 +345,12 @@ letter-spacing: 0.32px;
   }
 
 /*button*/
+@media screen and (max-width: 767px) {
+    .btn-hero {
+        display: none;
+    }
+}
+@media screen and (min-width: 768px) {
 .btn-hero {
     font-weight: 500;
     letter-spacing: 0.04em; /* 0.64px*/
@@ -286,6 +365,7 @@ letter-spacing: 0.32px;
     margin: 0 auto;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 }
 
 .btn-hero:hover,
