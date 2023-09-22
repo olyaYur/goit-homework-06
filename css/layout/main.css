@@ -17,6 +17,7 @@ body {
 }
 @media screen and (min-width: 768px) {
 .title-first-level {
+    display: block;
     font-size: 56px;
     line-height: 1.07;  /*60px*/
     color: var(--first-level-title-color);
@@ -26,9 +27,16 @@ body {
     margin-bottom: 48px;
     max-width: 496px;
     margin: 0 auto;
-    margin-bottom: 48px;
+    margin-bottom: 36px;
 }
 }
+
+@media screen and (min-width: 1158px) {
+    .title-first-level {
+        margin-bottom: 48px;
+    }
+    }
+
 .title-secondary-level {
     font-size: 36px;
     line-height: 1.11; /* 111.111%   40px*/
@@ -37,36 +45,6 @@ body {
     text-align: center;
     letter-spacing: 0.02em; /*0.32px*/  /*it was mistarke*/
     margin-bottom: 72px;
-}
-
-.title-third-level {
-font-family: Roboto;
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: 1.2;
-letter-spacing: 0.02em
-text-transform: capitalize;
-}
-
-@media screen and (min-width: 768px) {
-    .title-third-level {
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 1.11; 
-        }
-}
-
-
-
-
-@media screen and (min-width: 1158px) {
-.title-third-level {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2; /* 120%  24px*/
-    color: var(--secondary-third-level-title-color);
-}
 }
 
 .our-advantages-title-third-level {
@@ -79,6 +57,29 @@ text-transform: capitalize;
     text-transform: capitalize;
 
 }
+
+
+@media screen and (min-width: 768px) {
+    .our-advantages-title-third-level {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 1.11; 
+        }
+}
+
+
+
+
+@media screen and (min-width: 1158px) {
+.our-advantages-title-third-level {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2; /* 120%  24px*/
+    color: var(--secondary-third-level-title-color);
+}
+}
+
+
 
 
 /* section hero*/
@@ -97,24 +98,6 @@ text-transform: capitalize;
     text-align: center;
 
 }
-@media screen and (min-width: 768px) {
-.segment-hero {
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-    ), 
-    
-    url('../../images/hero/hero-img-mobile.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-color: var(--navyblue-color);
-    padding-top: 188px;
-    padding-bottom: 188px;
-    text-align: center;
-
-}
-}
 
 /* кроссбраузерна умова перевырки щільності екрана*/
 /* користувач зайшов з моб.присторою*/
@@ -126,13 +109,29 @@ screen and (min-device-pixel-ratio: 2) {
     }
 }
 
-/* Користувач зайшов з планшету */
 
 @media screen and (min-width: 768px) {
-    .segment-hero {
-        background-image: url('../../images/hero/hero-img-tablet.jpg');
-    }
+.segment-hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+    ), 
+    
+    url('../../images/hero/hero-img-tablet.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: var(--navyblue-color);
+    height: auto;
+    padding-top: 112px;
+    padding-bottom: 112px;
+    text-align: center;
+
 }
+}
+
+/* Користувач зайшов з планшету */
+
 @media screen and (min-resolution: 192dpi) and (min-width: 768px),
 screen and (min-resolution: 2dppx), 
 screen and (min-device-pixel-ratio: 2) {
@@ -142,12 +141,27 @@ screen and (min-device-pixel-ratio: 2) {
 }
 
 
-/* Користувач зайшов з десктопу */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1158px) {
     .segment-hero {
-        background-image: url('../../images/hero/hero-img-desk.jpg');
+        background-image: linear-gradient(
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)
+        ), 
+        
+        url('../../images/hero/hero-img-desk.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-color: var(--navyblue-color);
+        height: auto;
+        padding-top: 188px;
+        padding-bottom: 188px;
+        text-align: center;
+    
     }
-}
+    }
+
+/* Користувач зайшов з десктопу */
 
 @media screen and (min-resolution: 192dpi) and (min-width: 1024px),
 screen and (min-resolution: 2dppx), 
@@ -156,6 +170,26 @@ screen and (min-device-pixel-ratio: 2) {
         background-image: url('../../retina/hero/hero-img-desk@2x.jpg');
     }
 }
+
+
+
+
+
+
+
+/*section our advantages*/
+
+
+.segment-our-advantages {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+@media screen and (min-width: 1158px) {
+    .segment-our-advantages {
+        padding-top: 134px;
+        padding-bottom: 120px;
+    }
+    }
 
 
 .advantages-text{
@@ -173,11 +207,6 @@ letter-spacing: 0.32px;
     }
 }
 
-
-
-
-/*section our advantages*/
-
 .advantages-list {
     display: flex;
     flex-direction: column;
@@ -186,18 +215,10 @@ letter-spacing: 0.32px;
 
 @media screen and (min-width: 768px) {
     .advantages-list {
-        gap: 24px;
-    }
-}
-
-
-
-@media screen and (min-width: 768px) {
-    .advantages-list {
-        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         gap: 24px;
+        row-gap: 72px;
     }
     .advantages-item {
         width: calc((100% - 24px) / 2);
@@ -251,6 +272,35 @@ letter-spacing: 0.32px;
 
 
 /* section our team */
+.segment-our-team {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    
+}
+@media screen and (min-width: 768px) {
+    .segment-our-team {
+        padding-top: 90px;
+        padding-bottom: 90px;
+        
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .segment-our-team {
+        padding-top: 120px;
+        padding-bottom: 120px;
+        
+    }
+}
+
+.our-team-title {
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 1.2;
+letter-spacing: 0.02em;
+}
+
 .segment-our-team {
     background-color: var(--cloud-color);
 
@@ -373,20 +423,18 @@ letter-spacing: 0.32px;
     background-color: var(--ocean-color);
 }
 
-
-
-/* розташування блоків*/
-.section {
-    padding: 96px 0;
+/*section our portfolio*/ 
+.segment-our-portfolio {
+    padding-top: 96px;
+    padding-bottom: 96px;
 }
 
 @media screen and (min-width: 1158px) {
-.section {
-    padding: 120px 0;
+    .segment-our-portfolio {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
 }
-}
-
-/*section our portfolio*/ 
 
 .our-portfolio-list-container {
     display: flex;
@@ -410,6 +458,14 @@ letter-spacing: 0.32px;
         column-gap: 24px;
         row-gap: 48px;
     }
+}
+
+.our-portfolio-category-title {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2; 
+    letter-spacing: 0.02em;
 }
 
 .our-portfolio-item {
